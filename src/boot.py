@@ -19,10 +19,10 @@ from user_lib.buzzer import Buzzer
 
 # ###################### Configuration ###############################
 
-PIN_BUZZER                  = 14
-PIN_BUTTON                  = 26
-PIN_SCL                     = 22
-PIN_SDA                     = 21
+PIN_BUZZER                  = 16
+PIN_BUTTON                  = 15
+PIN_SCL                     = 5
+PIN_SDA                     = 4
 CO2_I2C_ADDR                = 0x61
 CO2_MEASUREMENT_INTERVAL_S  = 30
 CO2_READ_INTERVAL_MS        = 10 * 1000
@@ -76,7 +76,8 @@ class App:
         self._readTimestamp = time.ticks_ms()
         measurements = self._scd30.read_measurement()
         print(measurements)
-        self._connectionManager.publish(MQTT_TOPIC_CO2, str(measurements[0]))
+        if(measurements[0] > 0):
+          self._connectionManager.publish(MQTT_TOPIC_CO2, str(measurements[0]))
         self._connectionManager.publish(MQTT_TOPIC_TEMP, str(measurements[1]))
         self._connectionManager.publish(MQTT_TOPIC_HUMI, str(measurements[2]))
         self._display.setMeasurements(measurements)

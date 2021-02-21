@@ -4,7 +4,7 @@ from utime import ticks_ms
 class PushButton(object):
     def __init__(self, pinNr, activeLow):
 
-      self._pin = Pin(pinNr, Pin.IN, Pin.PULL_UP if activeLow else Pin.PULL_DOWN) 
+      self._pin = Pin(pinNr, Pin.IN) 
       self._buttonReleasedState = 1 if activeLow else 0
       self._buttonPressedState = 0 if activeLow else 1
       self._longPressThreshold = 3000
@@ -56,4 +56,5 @@ class PushButton(object):
       
     def __isButtonPressed(self):
       return self._pin.value() == self._buttonPressedState
+
 
