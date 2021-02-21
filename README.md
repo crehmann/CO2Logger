@@ -1,6 +1,6 @@
 # CO<sub>2</sub> Logger
 
-Simple CO<sub>2</sub> logger written in MicroPython that broadcusts CO<sub>2</sub>, temperature and humidity measurements over mqtt (e.g. to HomeAssistant). It also features a display to show the measurments and a buzzer to signal acoustically when a CO<sub>2</sub> threshold ist exceeded.
+Simple CO<sub>2</sub> logger written in MicroPython that broadcasts CO<sub>2</sub>, temperature and humidity measurements over mqtt (e.g. to HomeAssistant). It also features a display to show the measurments and a buzzer to signal acoustically when a CO<sub>2</sub> threshold ist exceeded.
 
 ## Bill of materials
 
