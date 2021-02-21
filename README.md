@@ -14,8 +14,8 @@ Simple CO<sub>2</sub> logger written in MicroPython that broadcusts CO<sub>2</su
 
 ## Assembled Logger with display
 
-![](C:\Users\Christoph\Desktop\CO2Logger\assets\IMG_1424.jpg)
+![back](https://github.com/crehmann/CO2Logger/raw/main/assets/IMG_1424.jpg)
 
-![IMG_1425](C:\Users\Christoph\Desktop\CO2Logger\assets\IMG_1425.jpg)
+![front](https://github.com/crehmann/CO2Logger/raw/main/assets/IMG_1425.jpg)
 
 <center>(the mesh comes from an old kitchen sieve)</center>
